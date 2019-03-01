@@ -30,16 +30,7 @@ bool compareStrings(char* name1, char* name2) {
 
 int main(int argc, char* argv[]) {
 	char names[10][40] = {"Saroj", "Pradeep", "Arjun", "Suman", "Pravhu", "Oscar", "Jay","Nischal","Manish","Raju"};
-	FILE* fp;
 	char name[BUFSIZE];
-	char ch;
-
-	fp = fopen("data.txt", "r+");
-	if(fp == NULL) {
-		fprintf(stderr, "Data not found!\n");
-		return EXIT_FAILURE;
-	}
-
 
 	printf("Please enter the part to search : \n");
 	scanf("%s", name);
