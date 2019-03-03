@@ -7,13 +7,7 @@ if(isset($_POST['enc'])){
     echo $enc;
 }
 //decryption
-if(isset($_POST['dc'])){
-   if($text==$enc){
-    $enc= base64_encode($text); 
-       $dc=base64_decode($enc);
-       echo $dc;
-   }
-}
+
 
 ?>
 <html>
