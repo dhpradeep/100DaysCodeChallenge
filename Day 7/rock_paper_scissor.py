@@ -47,11 +47,11 @@ def PlayerVsPlayer(player1,player2):
 
 while True:
     os.system('cls')
-    choice = int(input("1. Player Vs. Computer \n2. Player Vs. Player (1/2): "))
-    if choice == 1:
+    choice = input("1. Player Vs. Computer \n2. Player Vs. Player (1/2): ")
+    if choice == '1':
         player = input("1. Paper / 2. Rock / 3. scissor (1,2,3): ")
         print(PlayerVsComputer(player))
-    elif choice == 2:
+    elif choice == '2':
         player1 = input("Player1: 1. Paper / 2. Rock / 3. scissor (1,2,3): ")
         player2 = input("Player2: 1. Paper / 2. Rock / 3. scissor (1,2,3): ")
         print(PlayerVsPlayer(player1,player2))
