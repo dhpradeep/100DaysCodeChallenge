@@ -38,13 +38,10 @@ void decrypt(char* code) {
 	char* decrypt = malloc(hash);
 	char* toFree = decrypt;
 	char* word = code;
-	printf("%d\n", hash);
 	for (int ch = *code; ch != '\0'; ch = *(++code))
 	{
 		if((code - word + 2) % 3  == 1){
 			*(decrypt++) = ch - (word - code + 1) - hash;
-			printf("%c\n", ch);
-			printf("%d\n", code - word);
 		}
 	}
 	*decrypt = '\0';
