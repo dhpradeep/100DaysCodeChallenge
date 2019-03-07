@@ -129,15 +129,14 @@ def main(level):
         if count == len(question):
             end('win',question,level)
             
-        
         print("\n")
         print(''.join('_ ' for i in question))
         drawHangman(val)
         print("Mistakes: " + ','.join(i for i in alreadyGivenWord))
         print("Correct words: " + ','.join(i for i in corrctWord))
         print("Remaining guess: " + str(6-val))
-        data = input("Enter your guess: ")
-        data = data[0]
+        data = input("Enter your guess: ")[0]
+        # data = data[0]
         if data in question:
             if data not in corrctWord:
                 corrctWord.insert(j,data)
